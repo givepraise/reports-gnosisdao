@@ -47,7 +47,7 @@ export default class DistStraightCurveWithCeiling extends BaseReport {
    */
   filterReceivers(rows) {
     const { filterReceivers } = this.config;
-    console.log(this.config);
+    this.log(JSON.stringify(filterReceivers, null, 2));
     if (Array.isArray(filterReceivers) && filterReceivers.length > 0) {
       this.log(
         `\nFiltering ${filterReceivers.length} receivers based on setting "filterReceivers":`
