@@ -31,13 +31,13 @@
       "default": "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
       "description": "The address of the token contract. If the token type is native, this field is ignored."
     },
-    "manualFilterAddress": {
+    "filterReceivers": {
       "type": "array",
       "items": {
-        "type": "string",
+        "type": "string"
       },
-      "default": ["0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb"],
+      "default": ["0x2a7DaEF13454b157C082936384c835ceB1C7a2FD"],
       "description": "Addresses to be filtered out of the receiver data. Defaults to the address of no_planet_b."
-    } 
+    }
   }
 }
