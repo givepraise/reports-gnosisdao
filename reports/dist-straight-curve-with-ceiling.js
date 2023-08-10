@@ -46,8 +46,13 @@ export default class DistStraightCurveWithCeiling extends BaseReport {
    * employees are not eligible for rewards.
    */
   filterReceivers(rows) {
-    const { filterReceivers } = this.config;
-    this.log(JSON.stringify(filterReceivers, null, 2));
+    let { filterReceivers } = this.config;
+
+    // If filterReceivers is a string, convert it to an array
+    if (!Array.isArray(filterReceivers) && filterReceivers) {
+      filterReceivers = [filterReceivers];
+    }
+
     if (Array.isArray(filterReceivers) && filterReceivers.length > 0) {
       this.log(
         `\nFiltering ${filterReceivers.length} receivers based on setting "filterReceivers":`
