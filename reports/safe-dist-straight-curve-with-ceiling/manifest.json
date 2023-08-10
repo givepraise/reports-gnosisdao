@@ -36,7 +36,7 @@
       "items": {
         "type": "string"
       },
-      "default": ["0xe6b5A31d8bb53D2C769864aC137fe25F4989f1fd"],
+      "default": ["0x2a7DaEF13454b157C082936384c835ceB1C7a2FD"],
       "description": "Addresses to be filtered out of the receiver data. Defaults to the address of no_planet_b."
     }
   }
