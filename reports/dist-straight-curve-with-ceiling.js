@@ -59,15 +59,12 @@ export default class DistStraightCurveWithCeiling extends BaseReport {
       );
       this.log(`\nuseraccount, score`);
       filterReceivers.forEach((filterReceiver) => {
-        this.log(
-          `${
-            rows.find((row) => row.identity_eth_address === filterReceiver)
-              .useraccount_name
-          }, ${
-            rows.find((row) => row.identity_eth_address === filterReceiver)
-              .score
-          } `
+        const row = rows.find(
+          (row) => row.identity_eth_address === filterReceiver
         );
+        if (row) {
+          this.log(`${row.useraccount_name}, ${row.score}`);
+        }
       });
 
       return rows.filter(
