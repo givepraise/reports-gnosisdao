@@ -145,6 +145,9 @@ export default class DistStraightCurveWithCeiling extends BaseReport {
       });
     }
 
+    this.log(`Report start date: ${startDate}`);
+    this.log(`Report end date: ${endDate}`);
+
     if (Array.isArray(rows) && rows.length > 0) {
       rows = this.filterNoRewardsAddress(rows);
       rows = this.filterReceivers(rows);
